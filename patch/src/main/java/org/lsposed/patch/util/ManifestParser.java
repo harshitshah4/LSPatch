@@ -34,6 +34,10 @@ public class ManifestParser {
 
                         String name = parser.getName();
 
+                        System.out.println("parserName: " + name);
+                        System.out.println("attrName: " + attrName);
+                        System.out.println("attrNameRes: " + attrNameRes);
+
                         if ("manifest".equals(name)) {
                             if ("package".equals(attrName)) {
                                 packageName = parser.getAttrValue(i).toString();
@@ -41,7 +45,7 @@ public class ManifestParser {
                         }
 
                         if ("uses-sdk".equals(name)) {
-                            if ("android:minSdkVersion".equals(attrName)) {
+                            if ("minSdkVersion".equals(attrName)) {
                                 minSdkVersion = Integer.parseInt(parser.getAttrValue(i).toString());
                             }
                         }
