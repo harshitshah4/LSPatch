@@ -7,11 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import pxb.android.axml.Axml;
 import pxb.android.axml.AxmlParser;
-import wind.android.content.res.AXmlResourceParser;
-import wind.v1.XmlPullParser;
-import wind.v1.XmlPullParserException;
 
 /**
  * Created by Wind
