@@ -69,6 +69,10 @@ public class ManifestParser {
             e.printStackTrace();
             return null;
         }
+
+        System.out.println("packageName: " + packageName);
+        System.out.println("appComponentFactory: " + appComponentFactory);
+        System.out.println("minSDKVersion: " + minSdkVersion);
         return new Pair(packageName, appComponentFactory, minSdkVersion);
     }
 
