@@ -33,11 +33,7 @@ public class ManifestParser {
                         int attrNameRes = parser.getAttrResId(i);
 
                         String name = parser.getName();
-
-                        System.out.println("parserName: " + name);
-                        System.out.println("attrName: " + attrName);
-                        System.out.println("attrNameRes: " + attrNameRes);
-
+                        
                         if ("manifest".equals(name)) {
                             if ("package".equals(attrName)) {
                                 packageName = parser.getAttrValue(i).toString();
@@ -70,9 +66,6 @@ public class ManifestParser {
             return null;
         }
 
-        System.out.println("packageName: " + packageName);
-        System.out.println("appComponentFactory: " + appComponentFactory);
-        System.out.println("minSDKVersion: " + minSdkVersion);
         return new Pair(packageName, appComponentFactory, minSdkVersion);
     }
 
