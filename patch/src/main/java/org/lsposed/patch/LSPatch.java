@@ -109,8 +109,8 @@ public class LSPatch {
     private final JCommander jCommander;
 
     private final Logger logger;
-
     public LSPatch(Logger logger, String... args) {
+
         jCommander = JCommander.newBuilder().addObject(this).build();
         try {
             jCommander.parse(args);
