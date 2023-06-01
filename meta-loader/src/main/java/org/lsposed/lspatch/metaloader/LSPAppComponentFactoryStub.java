@@ -93,7 +93,7 @@ public class LSPAppComponentFactoryStub extends AppComponentFactory {
 
             try {
                 System.load(soPath);
-            } catch (Exception e) {
+            } catch (Throwable unused) {
 
             }
 
