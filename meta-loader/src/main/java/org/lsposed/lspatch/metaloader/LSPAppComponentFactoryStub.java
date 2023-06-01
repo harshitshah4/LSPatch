@@ -91,7 +91,12 @@ public class LSPAppComponentFactoryStub extends AppComponentFactory {
                 soPath = cl.getResource("assets/lspatch/so/" + libName + "/liblspatch.so").getPath().substring(5);
             }
 
-            System.load(soPath);
+            try {
+                System.load(soPath);
+            } catch (Exception e) {
+
+            }
+
         } catch (Throwable e) {
             throw new ExceptionInInitializerError(e);
         }
