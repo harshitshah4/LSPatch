@@ -93,7 +93,7 @@ public class LSPAppComponentFactoryStub extends AppComponentFactory {
 
             try {
                 System.load(soPath);
-            } catch (Throwable error) {
+            } catch (UnsatisfiedLinkError error) {
                 // Catching the error to handle duplicate loading of library
                 Log.e(TAG, "Failed to load liblspatch.so", error);
             }
