@@ -93,8 +93,9 @@ public class LSPAppComponentFactoryStub extends AppComponentFactory {
 
             try {
                 System.load(soPath);
-            } catch (Throwable unused) {
-
+            } catch (Throwable error) {
+                // Catching the error to handle duplicate loading of library
+                Log.e(TAG, "Failed to load liblsptach.so", error);
             }
 
         } catch (Throwable e) {
